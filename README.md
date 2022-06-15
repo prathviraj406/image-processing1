@@ -10,3 +10,11 @@ import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
 img=mping.imread('download.jpg')<br>
 plt.imshow(img)<br>
+ image rotate
+ import cv2
+from PIL import Image
+image=Image.open("download.jpg")
+img=image.rotate(90)
+img.show()
+cv2.waitKey(0)
+cv2.destroyAllWindows()
