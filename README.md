@@ -81,3 +81,13 @@ mode: RGB<br>
 size: (1334, 888)<br>
 width: 1334<br>
 height: 888<br>
+9. import cv2<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+img=cv2.imread('butterflypic.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.show()<br><br>
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+plt.show()<br>
