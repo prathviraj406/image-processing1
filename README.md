@@ -5,19 +5,25 @@ img=cv2.imread('download.jpg',1)<br>
 cv2.imshow('flower1',img)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
+![p](https://user-images.githubusercontent.com/98145915/174048358-3e71801e-8c8a-4321-b19c-7a9d312001a6.png)
+
 matplotlib<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
 img=mping.imread('download.jpg')<br>
 plt.imshow(img)<br>
- image rotate
- import cv2
-from PIL import Image
-image=Image.open("download.jpg")
-img=image.rotate(90)
-img.show()
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+![pr](https://user-images.githubusercontent.com/98145915/174048578-8c840dce-ce42-4bb0-8f1b-7d8df3382da4.png)<br>
+v
+ image rotate<br>
+ import cv2<br><br>
+from PIL import Image<br>
+image=Image.open("download.jpg")<br>
+img=image.rotate(90)<br><br>
+img.show()<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+![ro](https://user-images.githubusercontent.com/98145915/174048841-ed88c70c-f9d8-4203-aa47-9d43b7a1bf50.png)<br>
+
 resize the original image<br>
 import cv2<br>
 img=cv2.imread('sunflowers.jpg')<br><br>
