@@ -63,3 +63,21 @@ print(img2)<br>
 output:<br>
 (255, 255, 0)<br>
 (255, 0, 0)<br>
+8.Write a program to display the image attributes?<br>
+from PIL import Image<br>
+image=Image.open('tree.jpg')<br>
+print("filename:",image.filename)<br>
+print("format:",image.format)<br>
+print("mode:",image.mode)<br>
+print("size:",image.size)<br>
+print("width:",image.width)<br>
+print("height:",image.height)<br>
+image.close()<br>
+
+output:<br>
+filename: tree.jpg<br>
+format: JPEG<br>
+mode: RGB<br>
+size: (1334, 888)<br>
+width: 1334<br>
+height: 888<br>
