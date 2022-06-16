@@ -54,4 +54,12 @@ from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,2<br>55,0))<br>
 img.show()<br>
 ![n](https://user-images.githubusercontent.com/98145915/174051330-4cfdbe50-35f9-405a-9a2b-81489d593100.png)
-7.
+7..Devlop a program to convert color string to RGB color value?<br>
+from PIL import ImageColor<br><br>
+img1=ImageColor.getrgb("yellow")<br>
+print(img1)<br>
+img2=ImageColor.getrgb("red")<br>
+print(img2)<br>
+output:<br>
+(255, 255, 0)<br>
+(255, 0, 0)<br>
