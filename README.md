@@ -92,3 +92,5 @@ plt.show()<br><br>
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
 plt.show()<br>
 ![1](https://user-images.githubusercontent.com/98145915/174055098-19556aae-e648-4135-9449-282dcc4c01d4.png)
+![2](https://user-images.githubusercontent.com/98145915/174055317-075011d0-d8be-4d3a-80f0-4c722e7f14a8.png)
+
