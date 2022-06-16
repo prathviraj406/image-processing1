@@ -53,3 +53,5 @@ cv2.destroyAllwindows<br>
 from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,2<br>55,0))<br>
 img.show()<br>
+![n](https://user-images.githubusercontent.com/98145915/174051330-4cfdbe50-35f9-405a-9a2b-81489d593100.png)
+7.
