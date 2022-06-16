@@ -91,3 +91,4 @@ img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
 plt.show()<br><br>
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
 plt.show()<br>
+![1](https://user-images.githubusercontent.com/98145915/174055098-19556aae-e648-4135-9449-282dcc4c01d4.png)
