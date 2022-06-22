@@ -95,4 +95,10 @@ plt.show()<br>
 ![2](https://user-images.githubusercontent.com/98145915/174055317-075011d0-d8be-4d3a-80f0-4c722e7f14a8.png)
 ![3](https://user-images.githubusercontent.com/98145915/174055458-a8927fd8-cbb6-4866-b4e4-4bc97c2c164b.png)
 ![4](https://user-images.githubusercontent.com/98145915/174055552-c4c407d3-ccc7-4e89-98fe-d4b446977011.png)
-
+10.image using url<br>
+from skimage import iofrom skimage impo<br>rt io<br>
+import matplotlib.pyplot as plt<br>
+url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc95jShZH3NnnLDjfy5flhVeirqgcVmlH09g&usqp=CAU'
+image=io.imread(url)
+plt.imshow(image)
+plt.show()
