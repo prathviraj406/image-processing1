@@ -102,3 +102,4 @@ url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc95jShZH3NnnLDjfy5fl
 image=io.imread(url)<br>
 plt.imshow(image)<br>
 plt.show()<br>
+![1](https://user-images.githubusercontent.com/98145915/175005610-e8cd413e-c194-476b-abf7-2bd19b3a86ac.png)<br>
