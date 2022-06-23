@@ -125,5 +125,7 @@ fimg4=img1/img2
 plt.imshow(fimg4)
 plt.show()<br>
 cv2.imwrite('output.jpg',fimg4)<br>
+![1](https://user-images.githubusercontent.com/98145915/175261348-314322c2-8310-429a-9575-953cb1b6f046.png)
+
 
 
