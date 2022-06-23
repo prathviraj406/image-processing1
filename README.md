@@ -130,6 +130,13 @@ cv2.imwrite('output.jpg',fimg4)<br>
 ![22](https://user-images.githubusercontent.com/98145915/175261663-efcd32c7-a2cf-4918-b681-062dbfde4e1b.png)<br>
 ![24](https://user-images.githubusercontent.com/98145915/175261823-042d1c95-8976-40c7-8b7d-7d030599af34.png)<br>
 11.MASK AND BLUR A IMAGE<BR>
+import cv2<br>
+import matplotlib.image as mpimg<br>
+import matplotlib.pyplot as plt<br>
+img=mpimg.imread('img.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+![25](https://user-images.githubusercontent.com/98145915/175262443-ded933de-72f9-41ff-9caa-73a0acc12379.png)<br>
 
 
 
