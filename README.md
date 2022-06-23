@@ -103,3 +103,27 @@ image=io.imread(url)<br>
 plt.imshow(image)<br>
 plt.show()<br>
 ![1](https://user-images.githubusercontent.com/98145915/175005610-e8cd413e-c194-476b-abf7-2bd19b3a86ac.png)<br>
+11.maths operation<br>
+import cv2<br>
+import matplotlib.image as mpimg<br>
+import matplotlib.pyplot as plt<br>
+img1=cv2.imread('img1.jpg')<br>
+img2=cv2.imread('sunflowers.jpg')<br>
+fimg1=img1+img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2=img1-img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3=img1*img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
+cv2.imwrite('output.jpg',fimg3)<br>
+fimg4=img1/img2
+plt.imshow(fimg4)
+plt.show()<br>
+cv2.imwrite('output.jpg',fimg4)<br>
+
+
