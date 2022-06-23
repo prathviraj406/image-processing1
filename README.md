@@ -172,6 +172,28 @@ blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
 plt.imshow(blur)<br>
 plt.show()<br>
 ![11](https://user-images.githubusercontent.com/98145915/175265253-8f7a6f4a-e5f9-4d9a-b145-85e81f0e2888.png)<br>
+12.to change the image to differnt color space<br>
+ import cv2 <br>
+img=cv2.imread("avenger.jpg")<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image",gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HLS image",hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllwindows()<br>
+ ![gray](https://user-images.githubusercontent.com/98145915/175271470-9ce7a0da-96ec-45cb-a233-3986510f2322.png)<br>
+![hsv](https://user-images.githubusercontent.com/98145915/175271528-766fbe00-328f-4a92-918a-e3239df02117.png)<br>
+![lab](https://user-images.githubusercontent.com/98145915/175271570-06713541-1304-47e0-af91-e3470f2c6e1e.png)<br>
+ ![yuv](https://user-images.githubusercontent.com/98145915/175271611-3cb0bb9d-e9f7-493e-98c6-0124da05db0a.png)<br>
+ ![hls](https://user-images.githubusercontent.com/98145915/175271639-a0d44a68-ee07-413c-bcf8-c92232f13d76.png)<br>
+
+
 
 
 
