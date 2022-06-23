@@ -148,6 +148,18 @@ plt.subplot(1,2,2)<br>
 plt.imshow(result)<br>
 plt.show()<br>
 ![25](https://user-images.githubusercontent.com/98145915/175262807-08cf40db-fcd4-4e03-9be6-0f8c1abb2eec.png)<br>
+ import cv2<br>
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+light_white=(0,0,200)<br>
+dark_white=(145,60,255)<br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white)<br>
+plt.subplot(1,2,1)
+plt.imshow(mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
+![100](https://user-images.githubusercontent.com/98145915/175264612-420feff9-1536-45fa-bb99-e80a43591370.png)<br>
 
 
 
