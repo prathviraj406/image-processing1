@@ -194,7 +194,18 @@ cv2.destroyAllwindows()<br>
  ![hls](https://user-images.githubusercontent.com/98145915/175271639-a0d44a68-ee07-413c-bcf8-c92232f13d76.png)<br>
 code to see the size of image<br>
  img1.shape<br>
-
+13.2D array<br>
+ import cv2 as c<br>
+import numpy as np<br>
+from PIL import Image<br>
+array=np.zeros([100,200,3],dtype=np.uint8)<br>
+array[:,:100]=[255,130,0]<br>
+array[:,100:]=[0,0,255]<br>
+img=Image.fromarray(array)<br>
+img.save('imgYG.png')<br>
+img.show()<br>
+c.waitKey(0)<br>
+![12](https://user-images.githubusercontent.com/98145915/175274193-441d45c5-02dd-4846-9b51-d9a9bbe4b664.png)<br>
 
 
 
