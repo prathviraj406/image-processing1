@@ -192,7 +192,8 @@ cv2.destroyAllwindows()<br>
 ![lab](https://user-images.githubusercontent.com/98145915/175271570-06713541-1304-47e0-af91-e3470f2c6e1e.png)<br>
  ![yuv](https://user-images.githubusercontent.com/98145915/175271611-3cb0bb9d-e9f7-493e-98c6-0124da05db0a.png)<br>
  ![hls](https://user-images.githubusercontent.com/98145915/175271639-a0d44a68-ee07-413c-bcf8-c92232f13d76.png)<br>
-
+code to see the size of image<br>
+ img1.shape<br>
 
 
 
