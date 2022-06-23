@@ -160,8 +160,18 @@ plt.subplot(1,2,2)<br>
 plt.imshow(result)<br>
 plt.show()<br>
 ![100](https://user-images.githubusercontent.com/98145915/175264612-420feff9-1536-45fa-bb99-e80a43591370.png)<br>
-
-
+final_mask=mask + mask_white<br>
+final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(final_result)<br>
+plt.show()<br>
+![111](https://user-images.githubusercontent.com/98145915/175264968-0b859a0b-9ce2-4f3e-a8b8-ad05ac8b114d.png)<br>
+blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
+plt.imshow(blur)<br>
+plt.show()<br>
+![11](https://user-images.githubusercontent.com/98145915/175265253-8f7a6f4a-e5f9-4d9a-b145-85e81f0e2888.png)<br>
 
 
 
