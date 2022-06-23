@@ -125,7 +125,11 @@ fimg4=img1/img2
 plt.imshow(fimg4)
 plt.show()<br>
 cv2.imwrite('output.jpg',fimg4)<br>
-![1](https://user-images.githubusercontent.com/98145915/175261348-314322c2-8310-429a-9575-953cb1b6f046.png)
+![1](https://user-images.githubusercontent.com/98145915/175261348-314322c2-8310-429a-9575-953cb1b6f046.png)<br>
+![21](https://user-images.githubusercontent.com/98145915/175261469-f352612f-c10c-48ca-b83b-5c2f4b128537.png)<br>
+![22](https://user-images.githubusercontent.com/98145915/175261663-efcd32c7-a2cf-4918-b681-062dbfde4e1b.png)<br>
+
+
 
 
 
