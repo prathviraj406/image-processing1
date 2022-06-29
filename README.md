@@ -206,7 +206,7 @@ img.save('imgYG.png')<br>
 img.show()<br>
 c.waitKey(0)<br>
 ![12](https://user-images.githubusercontent.com/98145915/175274193-441d45c5-02dd-4846-9b51-d9a9bbe4b664.png)<br>
-bitwise operation<br>
+14.bitwise operation<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 im1=cv2.imread('img.jpg')<br>
@@ -229,5 +229,22 @@ plt.subplot(155)<br>
 plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br>
 ![1](https://user-images.githubusercontent.com/98145915/176422736-2b2b7fd5-9325-4e7d-8596-b0e81089f6ee.png)
+15.gaussian<br>
+import cv2<br>
+import numpy as np<br>
+image=cv2.imread('img1.jpg')<br>
+cv2.imshow('original image',img)<br>
+cv2.waitKey(0)<br>
+Gaussian=cv2.GaussianBlur(image,(7,7),0)<br>
+cv2.imshow('Gaussian Blurring',Gaussian)<br>
+cv2.waitKey(0)<br>
+median=cv2.medianBlur(img,5)<br>
+cv2.imshow('median Blurring',median)<br>
+cv2.waitKey(0)<br>
+bilateral=cv2.bilateralFilter(img,9,75,75)<br>
+cv2.imshow(' bilateral Blurring',bilateral)<br>
+cv2.waitKey(0)
+cv2.destroyAllwindows()<br>
+![2](https://user-images.githubusercontent.com/98145915/176426734-73d83336-a82f-49c8-9c3a-afef0458a103.png)
 
 
