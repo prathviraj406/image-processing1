@@ -206,6 +206,27 @@ img.save('imgYG.png')<br>
 img.show()<br>
 c.waitKey(0)<br>
 ![12](https://user-images.githubusercontent.com/98145915/175274193-441d45c5-02dd-4846-9b51-d9a9bbe4b664.png)<br>
-
+bitwise operation<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+im1=cv2.imread('img.jpg')<br>
+im2=cv2.imread('img.jpg')<br>
+ax=plt.subplots(figsize=(15,10))
+bitwiseAnd=cv2.bitwise_and(im1,im2)<br>
+bitwiseOr=cv2.bitwise_or(im1,im2)<br>
+bitwiseXor=cv2.bitwise_xor(im1,im2)<br>
+bitwiseNot_img1=cv2.bitwise_not(im1)<br>
+bitwiseNot_img2=cv2.bitwise_not(im2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br>
 
 
