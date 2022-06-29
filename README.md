@@ -228,5 +228,6 @@ plt.imshow(bitwiseNot_img1)<br>
 plt.subplot(155)<br>
 plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br>
+![1](https://user-images.githubusercontent.com/98145915/176422736-2b2b7fd5-9325-4e7d-8596-b0e81089f6ee.png)
 
 
