@@ -270,10 +270,10 @@ enh_sha=ImageEnhance.Sharpness(image)<br>
 sharpness=3.0
 image_sharped=enh_sha.enhance(sharpness)<br>
 image_sharped.show()<br>
-![20](https://user-images.githubusercontent.com/98145915/178708258-18b7e7bc-2aea-4611-bb16-0f8f00296f8f.png)<br>
-![30](https://user-images.githubusercontent.com/98145915/178708560-d14f3aa5-4eae-4fbf-a171-5ba0abb55c87.png)<br>
-![45](https://user-images.githubusercontent.com/98145915/178709726-3b8d27ec-be1e-497d-b674-623482189780.png)<br>
-![48](https://user-images.githubusercontent.com/98145915/178709875-0afbf797-6b70-4981-8206-a5cc3f17f1d3.png)<br>
-![44](https://user-images.githubusercontent.com/98145915/178710001-a574302b-50a3-4b88-b131-b3ddaea3390d.png)<br>
+![20](https://user-images.githubusercontent.com/98145915/178708258-18b7e7bc-2aea-4611-bb16-0f8f00296f8f.png)
+![30](https://user-images.githubusercontent.com/98145915/178708560-d14f3aa5-4eae-4fbf-a171-5ba0abb55c87.png)
+![45](https://user-images.githubusercontent.com/98145915/178709726-3b8d27ec-be1e-497d-b674-623482189780.png)
+![48](https://user-images.githubusercontent.com/98145915/178709875-0afbf797-6b70-4981-8206-a5cc3f17f1d3.png)
+![44](https://user-images.githubusercontent.com/98145915/178710001-a574302b-50a3-4b88-b131-b3ddaea3390d.png)
 
 
