@@ -248,7 +248,7 @@ cv2.destroyAllwindows()<br>
 ![2](https://user-images.githubusercontent.com/98145915/176426734-73d83336-a82f-49c8-9c3a-afef0458a103.png)
 ![22](https://user-images.githubusercontent.com/98145915/178706531-ffb705a8-33db-49a0-8682-051746f0ce9a.png)
 ![11](https://user-images.githubusercontent.com/98145915/178706750-cff3bcb1-7830-4754-b30b-80cce852bcaa.png)
-![33](https://user-images.githubusercontent.com/98145915/178706971-7568b5cd-e0d4-4dde-b512-2d24f6574c55.png)
+![33](https://user-images.githubusercontent.com/98145915/178706971-7568b5cd-e0d4-4dde-b512-2d24f6574c55.png)<br>
  16.IMAGE ENHANCEMENT<br>
  from PIL import Image<br><br>
 from PIL import ImageEnhance<br><br>
@@ -274,6 +274,31 @@ image_sharped.show()<br>
 ![30](https://user-images.githubusercontent.com/98145915/178708560-d14f3aa5-4eae-4fbf-a171-5ba0abb55c87.png)
 ![45](https://user-images.githubusercontent.com/98145915/178709726-3b8d27ec-be1e-497d-b674-623482189780.png)
 ![48](https://user-images.githubusercontent.com/98145915/178709875-0afbf797-6b70-4981-8206-a5cc3f17f1d3.png)
-![44](https://user-images.githubusercontent.com/98145915/178710001-a574302b-50a3-4b88-b131-b3ddaea3390d.png)
+![44](https://user-images.githubusercontent.com/98145915/178710001-a574302b-50a3-4b88-b131-b3ddaea3390d.png)<br>
+16.MORPHOPOGICAL OPERATION<br>
+ import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+from PIL import Image,ImageEnhance<br>
+img = cv2.imread('img.jpg',0)<br>
+ax=plt.subplots(figsize=(20,10))<br>
+kernel = np.ones((5,5),np.uint8)<br>
+opening = cv2.morphologyEx(img,cv2.MORPH_OPEN ,kernel)<br>
+closing = cv2.morphologyEx(img,cv2.MORPH_CLOSE, kernel)<br>
+erosion = cv2.erode(img,kernel,iterations = 1)<br>
+dilation = cv2.dilate(img,kernel,iterations = 1)<br>
+gradient = cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br>
+plt.imshow(dilation)<br>
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
+ ![85](https://user-images.githubusercontent.com/98145915/178711263-d2bbeefe-ed05-421e-8a76-9f51a6320ba3.png)
 
 
