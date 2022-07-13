@@ -332,3 +332,21 @@ plt.title('Graylevel slicing with background')<br>
 plt.imshow(equ,'gray')<br>
 plt.show()<br>
 ![8](https://user-images.githubusercontent.com/98145915/178714321-348742a5-11f4-4d73-bcdb-b18c1d51defd.png)
+20.without background<br>
+ import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('moutain.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+                z[i][j]=0<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing with out background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
+ ![25](https://user-images.githubusercontent.com/98145915/178714797-39aefb74-f375-4dd0-ace6-733d170fa762.png)<br>
