@@ -249,5 +249,31 @@ cv2.destroyAllwindows()<br>
 ![22](https://user-images.githubusercontent.com/98145915/178706531-ffb705a8-33db-49a0-8682-051746f0ce9a.png)
 ![11](https://user-images.githubusercontent.com/98145915/178706750-cff3bcb1-7830-4754-b30b-80cce852bcaa.png)
 ![33](https://user-images.githubusercontent.com/98145915/178706971-7568b5cd-e0d4-4dde-b512-2d24f6574c55.png)
+ 16.IMAGE ENHANCEMENT<br>
+ from PIL import Image<br><br>
+from PIL import ImageEnhance<br><br>
+image=Image.open('img.jpg')<br><br>
+image.show()<br><br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
+image_brightened=enh_bri.enhance(brightness)
+image_brightened.show()<br>
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
+image_contrasted=enh_con.enhance(contrast)<br>
+image_contrasted.show()<br>
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=3.0
+image_sharped=enh_sha.enhance(sharpness)<br>
+image_sharped.show()<br>
+![20](https://user-images.githubusercontent.com/98145915/178708258-18b7e7bc-2aea-4611-bb16-0f8f00296f8f.png)<br>
+![30](https://user-images.githubusercontent.com/98145915/178708560-d14f3aa5-4eae-4fbf-a171-5ba0abb55c87.png)<br>
+![45](https://user-images.githubusercontent.com/98145915/178709726-3b8d27ec-be1e-497d-b674-623482189780.png)<br>
+![48](https://user-images.githubusercontent.com/98145915/178709875-0afbf797-6b70-4981-8206-a5cc3f17f1d3.png)<br>
+![44](https://user-images.githubusercontent.com/98145915/178710001-a574302b-50a3-4b88-b131-b3ddaea3390d.png)<br>
 
 
