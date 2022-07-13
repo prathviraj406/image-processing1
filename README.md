@@ -314,4 +314,21 @@ if isSaved:<br>
  ![7](https://user-images.githubusercontent.com/98145915/178713081-c4dbe28f-4bb0-4f10-a97d-4c9196ed7812.png)
 ![8](https://user-images.githubusercontent.com/98145915/178713604-a57a9860-621b-405a-880b-69a3aecf9911.png)<br>
 <br>
-
+19.programslicing the image with  background<br>
+import cv2<br>
+import numpy as np
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('moutain.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+                z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
+![8](https://user-images.githubusercontent.com/98145915/178714321-348742a5-11f4-4d73-bcdb-b18c1d51defd.png)
