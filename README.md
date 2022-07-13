@@ -312,5 +312,6 @@ cv2.destroyAll()<br>
 if isSaved:<br>
     print('the image is successfully saved.')<br>
  ![7](https://user-images.githubusercontent.com/98145915/178713081-c4dbe28f-4bb0-4f10-a97d-4c9196ed7812.png)
-
+![8](https://user-images.githubusercontent.com/98145915/178713604-a57a9860-621b-405a-880b-69a3aecf9911.png)<br>
+<br>
 
