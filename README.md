@@ -300,5 +300,17 @@ plt.subplot(155)<br>
 plt.imshow(gradient)<br>
 cv2.waitKey(0)<br>
  ![85](https://user-images.githubusercontent.com/98145915/178711263-d2bbeefe-ed05-421e-8a76-9f51a6320ba3.png)
+17.program to save grayscale img in a specified drive<br>
+ import cv2<br>
+OriginalImag=cv2.imread('moutain.jpg')<br>
+GrayImg=cv2.imread('moutain.jpg',0)
+isSaved=cv2.imwrite('E:/I.JPG',GrayImg)<br>
+cv2.imshow('display Original image',OriginalImag)<br>
+cv2.imshow('display Grayscale image',GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAll()<br>
+if isSaved:<br>
+    print('the image is successfully saved.')<br>
+ ![7](https://user-images.githubusercontent.com/98145915/178713081-c4dbe28f-4bb0-4f10-a97d-4c9196ed7812.png)
 
 
