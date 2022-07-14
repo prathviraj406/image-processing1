@@ -379,7 +379,8 @@ _ = plt.xlabel('Intensity Value')<br>
 _ = plt.ylabel('Count')<br>
 _ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])<br>
 plt.show()<br>
- 
+ ![1](https://user-images.githubusercontent.com/98145915/178965127-4ef38361-350e-48d9-87fc-367fb6756950.png)
+
 24.histogram using skimage<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
@@ -389,6 +390,7 @@ plt.show()<br>
 image = io.imread('moutain.jpg')<br>
 ax = plt.hist(image.ravel(), bins = 256)<br>
 plt.show()<br>
- 
+ ![50](https://user-images.githubusercontent.com/98145915/178965058-eafa5034-a196-4d66-9225-8b568d6a36b5.png)
+
  
  
