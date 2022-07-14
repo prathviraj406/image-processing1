@@ -357,5 +357,38 @@ img  = cv2.imread('moutain.jpg',0)<br>
 hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
 plt.hist(img.ravel(),256,[0,256])<br>
 plt.show()<br>
-![10](https://user-images.githubusercontent.com/98145915/178960386-67487392-d5a9-418f-9e05-cb511a81564c.png)<br>
+![11](https://user-images.githubusercontent.com/98145915/178960762-67102e64-cd4a-437f-b111-4d5a9626d2c7.png)<br>
+22.histogram using matplotlib<br>
+import cv2  <br>
+from matplotlib import pyplot as plt  <br>
+img = cv2.imread('moutain.jpg',0) <br>
+histr = cv2.calcHist([img],[0],None,[256],[0,256]) <br>
+plt.plot(histr) <br>
+plt.show()<br>
+![10](https://user-images.githubusercontent.com/98145915/178961053-15a595df-6c95-4c69-9f2d-6074f600f2ec.png)<br>
+ 23.histogram using skimage(1)<br>
+ from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('moutain.jpg')<br>
 
+_ = plt.hist(image.ravel(), bins = 256, color = 'orange', )<br>
+_ = plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count')<br>
+_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])<br>
+plt.show()<br>
+ 
+24.histogram using skimage<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+img = io.imread('moutain.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+image = io.imread('moutain.jpg')<br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
+plt.show()<br>
+ 
+ 
+ 
