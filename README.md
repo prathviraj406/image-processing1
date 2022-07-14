@@ -350,3 +350,12 @@ plt.title('Graylevel slicing with out background')<br>
 plt.imshow(equ,'gray')<br>
 plt.show()<br>
  ![25](https://user-images.githubusercontent.com/98145915/178714797-39aefb74-f375-4dd0-ace6-733d170fa762.png)<br>
+21.histogram using cv2<br>
+import cv2<br>
+import numpy as np<br>
+img  = cv2.imread('moutain.jpg',0)<br>
+hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
+plt.hist(img.ravel(),256,[0,256])<br>
+plt.show()<br>
+![10](https://user-images.githubusercontent.com/98145915/178960386-67487392-d5a9-418f-9e05-cb511a81564c.png)<br>
+
