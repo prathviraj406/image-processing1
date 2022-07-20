@@ -391,6 +391,80 @@ image = io.imread('moutain.jpg')<br>
 ax = plt.hist(image.ravel(), bins = 256)<br>
 plt.show()<br>
  ![50](https://user-images.githubusercontent.com/98145915/178965058-eafa5034-a196-4d66-9225-8b568d6a36b5.png)
+ 25.image negative<br>
+ %matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+import warnings<br>
+import matplotlib.cbook<br>
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread('pr1.jpg')<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic)<br>
+plt.axis('off');<br>
+![image](https://user-images.githubusercontent.com/98145915/179966663-0f317ab5-50a7-4006-a420-c728b77f1503.png)<br>(original)
+negative=255-pic<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
+![image](https://user-images.githubusercontent.com/98145915/179967126-2b0c3eb2-f0a7-4db7-925f-ab909aba8e31.png)<br>
+26.log transfromation<br>
+%matplotlib inline
+
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+pic=imageio.imread('pr1.jpg')<br>
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
+
+max_=np.max(gray)<br>
+
+def log_transform():<br>
+    return(255/np.log(1+max_))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
+![image](https://user-images.githubusercontent.com/98145915/179967417-a4b2b277-bd7e-4a9e-8d89-e58d67057510.png)<br>
+27.gamma correction<br>
+28.sharpeness<br>
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+my_image=Image.open('pr1.jpg')<br>
+sharp=my_image.filter(ImageFilter .SHARPEN)<br>
+sharp.save('D:/image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/179968296-f248b8a5-8547-4236-8867-0f4fbbee0c54.png)<br>
+29.flipping<br>
+import matplotlib.pyplot as plt<br><br>
+img=Image.open('pr1.jpg')<br>
+plt.imshow(img)<br><br>
+plt.show()<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+flip.save('D:/image_flip.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/179968550-79384c62-a61f-4f8f-a214-c8f8e56ad415.png)<br>
+cropping<br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('pr1.jpg')<br>
+width,height=im.size<br>
+im1=im.crop((280,100,800,600))<br>
+im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/179968711-9b1bb4bd-a83a-48fb-bf0e-36980e2ed365.png)
+
+
+
+
+
+
+
 
  
  
