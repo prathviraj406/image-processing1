@@ -427,6 +427,17 @@ plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
 plt.axis('off');<br>
 ![image](https://user-images.githubusercontent.com/98145915/179967417-a4b2b277-bd7e-4a9e-8d89-e58d67057510.png)<br>
 27.gamma correction<br>
+ import imageio<br>
+import matplotlib.pyplot as plt<br>
+#Gamma encoding<br>
+pic=imageio.imread('pr1.jpg')<br>
+gamma=2.2#Gamma <1 ~ Dark ; Gamma >1 ~ Bright<br>
+gamma_correction=((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
+![image](https://user-images.githubusercontent.com/98145915/179969613-f55bfe0c-376f-486c-bf78-4b6fdc10947a.png)
+
 28.sharpeness<br>
 from PIL import Image<br>
 from PIL import ImageFilter<br>
@@ -458,6 +469,7 @@ im1.show()<br>
 plt.imshow(im1)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/179968711-9b1bb4bd-a83a-48fb-bf0e-36980e2ed365.png)
+
 
 
 
