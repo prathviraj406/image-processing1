@@ -697,4 +697,14 @@ plt.imshow(input_image)<br>
  
 plt.show()  
 # use input_image.show() to see the image on the<br>
+#min<br>
+import imageio<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread('pr1.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
 
+print(min_channels)<br>
+![image](https://user-images.githubusercontent.com/98145915/186398911-42659051-64d2-4d07-9db6-6639ac9e0d30.png)
