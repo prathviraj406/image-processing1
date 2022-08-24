@@ -487,7 +487,7 @@ image = np.tile(x, (100, 1)).T<br>
 plt.imshow(image, cmap='gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/186377120-8ce827d0-d2b1-400e-840c-68872d2990e4.png)<br>
-#Fill circle with color gradient<br>
+31#Fill circle with color gradient<br>
 import numpy as np<br><br>
 import matplotlib.pyplot as plt<br><br>
 
@@ -513,7 +513,7 @@ for y in range(imgsize[1]):<br><br>
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/186385754-8fe7f078-3fb9-4f36-9042-0f6076d9148c.png)<br>
-#RGB<br>
+32#RGB<br>
 from PIL import Image<br>
 import numpy as np<br>
 w, h = 600, 600
@@ -530,7 +530,35 @@ img.save('my.png')<br>
 plt.imshow(img)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/186387153-10ad1d99-fbdc-4ce7-8ca0-61234a8a0702.png)<BR>
-
+33.# Python3 program for printing<br>
+# the rectangular pattern<br>
+ 
+# Function to print the pattern<br>
+def printPattern(n):<br>
+ 
+    arraySize = n * 2 - 1;<br>
+    result = [[0 for x in range(arraySize)]<br>
+                 for y in range(arraySize)];<br>
+         
+    # Fill the values<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            if(abs(i - (arraySize // 2)) >
+               abs(j - (arraySize // 2))):<br>
+                result[i][j] = abs(i - (arraySize // 2)) ;<br>
+            else:<br>
+                result[i][j] = abs(j - (arraySize // 2)) ;<br>
+    # Print the array<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            print(result[i][j], end = " ");<br>
+        print("");<br>
+ 
+# Driver Code<br>
+n = 4;<br>
+ 
+printPattern(n);<br>
+![image](https://user-images.githubusercontent.com/98145915/186388730-737aa0ff-82ef-4974-bd1b-4fcd747a952b.png)<br>
 
 
 
