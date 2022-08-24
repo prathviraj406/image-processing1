@@ -479,7 +479,14 @@ img = Image.fromarray(data, 'RGB')<br>
 img.save('my.png')<br>
 img.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/186376226-b405278a-bfb8-4c46-97aa-5421bdb40e58.png)<br>
-
+30.#Grayscale gradient<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+x = np.linspace(10,6, 100)<br>
+image = np.tile(x, (100, 1)).T<br>
+plt.imshow(image, cmap='gray')<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/186377120-8ce827d0-d2b1-400e-840c-68872d2990e4.png)<br>
 
 
 
