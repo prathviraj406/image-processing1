@@ -566,8 +566,47 @@ print('The Shape of the image is:',img.shape)<br>
 print('The image as array is:')<br>
 print(img)<br>
 ![image](https://user-images.githubusercontent.com/98145915/186389509-5b8a679a-73a8-4bd4-b241-7fe048396b0d.png)<br>
+34.program to perfrom image manipulation and edge detection<br>
+import cv2<br><br>
 
+# Read the original image<br><br>
+img = cv2.imread('pr1.jpg')<br><br>
 
+# Display original image<br><br>
+cv2.imshow('Original', img)<br><br>
+cv2.waitKey(0)<br><br>
+
+# Convert to graycsale<br><br>
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br><br>
+<br><br>
+# Blur the image for better edge detection<br><br>
+img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br><br>
+ <br><br>
+# Sobel Edge Detection<br><br>
+sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br><br>
+sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br><br>
+sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br><br>
+<br><br>
+# Display Sobel Edge Detection Images<br><br>
+cv2.imshow('Sobel X', sobelx)<br><br>
+cv2.waitKey(0)<br><br>
+cv2.imshow('Sobel Y', sobely)<br><br>
+cv2.waitKey(0)<br><br>
+cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br><br>
+cv2.waitKey(0)<br><br>
+
+# Canny Edge Detection<br><br>
+edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br>
+<br>
+# Display Canny Edge Detection Image<br>
+cv2.imshow('Canny Edge Detection', edges)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+![image](https://user-images.githubusercontent.com/98145915/186392223-24d9f8bc-879a-43cf-8595-b87adfea5c53.png)<br>
+![image](https://user-images.githubusercontent.com/98145915/186392361-816c1ddb-4999-4840-9464-57a34285e874.png)<br>
+![image](https://user-images.githubusercontent.com/98145915/186392490-85f51e5a-ac43-4a36-8d9b-5e9f776b90db.png)<br>
+![image](https://user-images.githubusercontent.com/98145915/186392602-3a359f3d-2888-4a09-a232-c87378ee0c25.png)<br>
+![image](https://user-images.githubusercontent.com/98145915/186392735-de3a6223-3180-440d-bac1-f04b29432ad5.png)<br>
 
 
  
