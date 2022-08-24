@@ -487,8 +487,32 @@ image = np.tile(x, (100, 1)).T<br>
 plt.imshow(image, cmap='gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/186377120-8ce827d0-d2b1-400e-840c-68872d2990e4.png)<br>
+#Fill circle with color gradient<br>
+import numpy as np<br><br>
+import matplotlib.pyplot as plt<br><br>
 
+arr = np.zeros((256,256,3), dtype=np.uint8)<br><br>
+imgsize = arr.shape[:2]<br><br>
+innerColor = (255, 255, 255)<br><br>
+outerColor = (0, 0, 0)<br><br>
+for y in range(imgsize[1]):<br><br>
+    for x in range(imgsize[0]):<br><br>
+        #Find the distance to the center<br><br>
+        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br><br>
 
+        #Make it on a scale from 0 to 1innerColor<br><br>
+        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br><br>
+<br><br>
+        #Calculate r, g, and b values<br><br>
+        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br><br>
+        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+        # print r, g, b<br>
+        arr[y, x] = (int(r), int(g), int(b))<br>
+
+plt.imshow(arr, cmap='gray')<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/186385754-8fe7f078-3fb9-4f36-9042-0f6076d9148c.png)<br>
 
 
 
