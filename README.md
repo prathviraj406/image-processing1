@@ -606,8 +606,96 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/98145915/186392361-816c1ddb-4999-4840-9464-57a34285e874.png)<br>
 ![image](https://user-images.githubusercontent.com/98145915/186392490-85f51e5a-ac43-4a36-8d9b-5e9f776b90db.png)<br>
 ![image](https://user-images.githubusercontent.com/98145915/186392602-3a359f3d-2888-4a09-a232-c87378ee0c25.png)<br>
-![image](https://user-images.githubusercontent.com/98145915/186392735-de3a6223-3180-440d-bac1-f04b29432ad5.png)<br>
-
-
- 
- 
+![image](https://user-images.githubusercontent.com/98145915/186392735-de3a6223-3180-440d-bac1-f04b29432ad5.png)<br><br>
+ ![image](https://user-images.githubusercontent.com/98145915/186397648-f6b47db5-dd38-471d-b795-f69269bb40f2.png)<br>
+from PIL import Image<br><br>
+ ![Uploading image.png…]()<br>
+import matplotlib.pyplot as plt<br><br>
+ ![Uploading image.png…]()<br>
+  
+# Create an image as input:<br><br>
+ ![Uploading image.png…]()<br>
+input_image = Image.new(mode="RGB", size=(400, 400),<br><br>
+ ![Uploading image.png…]()<br>
+                        color="blue")<br><br>
+ ![Uploading image.png…]()<br>
+  
+# save the image as "input.png"<br><br>
+ ![Uploading image.png…]()<br>
+#(not mandatory)<br><br>
+ ![Uploading image.png…]()<br>
+#input_image.save("input", format="png")<br><br>
+ ![Uploading image.png…]()<br>
+  <br><br>
+ ![Uploading image.png…]()<br>
+# Extracting pixel map:<br><br>
+ ![Uploading image.png…]()<br>
+pixel_map = input_image.load()<br><br>
+ ![Uploading image.png…]()<br>
+  
+# Extracting the width and height<br><br>
+ ![Uploading image.png…]()<br>
+# of the image:<br><br>
+ ![Uploading image.png…]()<br>
+width, height = input_image.size<br><br>
+ ![Uploading image.png…]()<br>
+z = 100<br><br>
+ ![Uploading image.png…]()<br>
+for i in range(width):<br><br>
+ ![Uploading image.png…]()<br>
+    for j in range(height):<br>
+ ![Uploading image.png…]()<br>
+        <br>
+ ![Uploading image.png…]()<br>
+        # the following if part will create<br>
+ ![Uploading image.png…]()<br>
+        # a square with color orange<br>
+ ![Uploading image.png…]()<br>
+        if((i >= z and i <= width-z) and (j >= z and j <= height-z)):<br>
+ ![Uploading image.png…]()<br>
+            <br>
+ ![Uploading image.png…]()<br>
+            # RGB value of orange<br>
+ ![Uploading image.png…]()<br>
+            pixel_map[i, j] = (255, 165, 255)<br>
+ ![Uploading image.png…]()<br>
+  
+        # the following else part will fill the<br>
+ ![Uploading image.png…]()<br>
+        # rest part with color light salmon.<br>
+ ![Uploading image.png…]()<br>
+        else:<br>
+ ![Uploading image.png…]()<br>
+            
+            # RGB value of light salmon.<br>
+ ![Uploading image.png…]()<br>
+            pixel_map[i, j] = (255, 160, 0)<br>
+ ![Uploading image.png…]()<br>
+  <br>
+ ![Uploading image.png…]()<br>
+# The following loop will create a cross<br>
+ ![Uploading image.png…]()<br>
+# of color blue.<br>
+ ![Uploading image.png…]()<br>
+for i in range(width):<br>
+ ![Uploading image.png…]()<br>
+    
+    # RGB value of Blue.<br>
+ ![Uploading image.png…]()<br>
+    pixel_map[i, i] = (0, 0, 255)<br>
+ ![Uploading image.png…]()<br>
+    pixel_map[i, width-i-1] = (0, 0, 255)<br>
+ ![Uploading image.png…]()<br>
+  <br>
+ ![Uploading image.png…]()<br>
+# Saving the final output<br>
+ ![Uploading image.png…]()<br>
+# as "output.png":<br>
+ ![Uploading image.png…]()<br>
+#input_image.save("output", format="png")<br>
+ ![Uploading image.png…]()<br>
+plt.imshow(input_image)<br>
+ ![Uploading image.png…]()<br>
+plt.show()  
+# use input_image.show() to see the image on the<br>
+ ![Uploading image.png…]()<br>
