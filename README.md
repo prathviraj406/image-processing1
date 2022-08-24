@@ -469,7 +469,16 @@ im1.show()<br>
 plt.imshow(im1)<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/179968711-9b1bb4bd-a83a-48fb-bf0e-36980e2ed365.png)
-
+29 #Converting matrix to image<br><br>
+from PIL import Image<br><br>
+import numpy as np<br><br>
+w, h = 512, 512<br><br>
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:256, 0:256] = [0, 255, 0] # red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+img.save('my.png')<br>
+img.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/186376226-b405278a-bfb8-4c46-97aa-5421bdb40e58.png)<br>
 
 
 
