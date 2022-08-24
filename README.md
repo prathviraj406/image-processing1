@@ -707,4 +707,31 @@ plt.show()<br>
 min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
 
 print(min_channels)<br>
-![image](https://user-images.githubusercontent.com/98145915/186398911-42659051-64d2-4d07-9db6-6639ac9e0d30.png)
+![image](https://user-images.githubusercontent.com/98145915/186398911-42659051-64d2-4d07-9db6-6639ac9e0d30.png)<br>
+#sd<br>
+from PIL import Image,ImageStat
+import matplotlib.pyplot as plt<br>
+im=Image.open('pr1.jpg')<br>
+plt.imshow(im)<br>
+plt.show()<br>
+stat=ImageStat.Stat(im)<br>
+print(stat.stddev)<br>
+ ![image](https://user-images.githubusercontent.com/98145915/186399430-03d5c2ac-1c16-452b-81ac-2a8e77447ac9.png)<br>
+ #average<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+img=imageio.imread("pr1.jpg")<br>
+plt.imshow(img)<br>
+np.average(img)<br>
+ ![image](https://user-images.githubusercontent.com/98145915/186399690-dc530c4e-ca20-4a29-bab7-683afb87eb2a.png)<br>
+ #max<br>
+import imageio<br>
+import numpy as np<br> as plt
+img=imageio.imread('pr1.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
+<br>
+print(max_channels)<br>
+![image](https://user-images.githubusercontent.com/98145915/186399922-7d86c751-f106-4679-ab6a-e18de356ffff.png)<br>
+
