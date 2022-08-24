@@ -513,7 +513,23 @@ for y in range(imgsize[1]):<br><br>
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145915/186385754-8fe7f078-3fb9-4f36-9042-0f6076d9148c.png)<br>
-
+#RGB<br>
+from PIL import Image<br>
+import numpy as np<br>
+w, h = 600, 600
+data = np.zeros((h, w, 3), dtype=np.uint8)<br>
+data[0:100, 0:100] = [255, 0, 0]<br>
+data[100:200, 100:200] = [255, 0, 255]<br>
+data[200:300, 200:300] = [0, 255, 0]<br>
+data[300:400, 300:400] = [130, 255, 0]<br>
+data[400:500, 400:500] = [0, 255, 170]<br>
+data[500:600, 500:600] = [180, 255, 0]<br>
+#red patch in upper left<br>
+img = Image.fromarray(data, 'RGB')<br>
+img.save('my.png')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/186387153-10ad1d99-fbdc-4ce7-8ca0-61234a8a0702.png)<BR>
 
 
 
