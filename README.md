@@ -559,6 +559,14 @@ n = 4;<br>
  
 printPattern(n);<br>
 ![image](https://user-images.githubusercontent.com/98145915/186388730-737aa0ff-82ef-4974-bd1b-4fcd747a952b.png)<br>
+34.#image to matrri<br>x<br>
+import matplotlib.image as image<br>
+img=image.imread('img.jpg')<br><br>
+print('The Shape of the image is:',img.shape)<br>
+print('The image as array is:')<br>
+print(img)<br>
+![image](https://user-images.githubusercontent.com/98145915/186389509-5b8a679a-73a8-4bd4-b241-7fe048396b0d.png)<br>
+
 
 
 
