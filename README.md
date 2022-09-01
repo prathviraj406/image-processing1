@@ -794,7 +794,7 @@ dst=cv2.inpaint(img,mask,3,cv2.INPAINT_TELEA)<br>
 cv2.imwrite('dimage_inpainted.png',dst)<br>
 plt.imshow(dst)<br>
 plt.show()<br>
-![image](https://user-images.githubusercontent.com/98145915/187877347-96df77e8-1a5f-419a-957d-fef89f1881f1.png<br>
+![image](https://user-images.githubusercontent.com/98145915/187877347-96df77e8-1a5f-419a-957d-fef89f1881f1.png)<br>
  39.import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 import pandas as pd<br>
