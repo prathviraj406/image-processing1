@@ -851,5 +851,13 @@ denoised_image = denoise_bilateral(landscape_image, multichannel=True)<br>
 # Show original and resulting images<br>
 plot_comparison (landscape_image, denoised_image, 'Denoised Image')<br>
 ![image](https://user-images.githubusercontent.com/98145915/187879644-e8601e93-1f8e-4713-801d-fb6bc0ac1632.png)<br>
- 
-
+ 42.from skimage.segmentation import slic <br>
+from skimage.color import label2rgb<br>
+face_image = plt.imread('face.jpg')<br>
+#Obtain the segmentation with 400 regions <br>
+segments = slic (face_image, n_segments-400)<br>
+#Put segments on top of original image to compare <br>
+segmented_image = label2rgb(segments, face_image, kind='avg')<br>
+#Show the segmented image <br>
+plot_comparison (face_image, segmented_image, 'Segmented image, 400 superpixels')<br><br>
+![image](https://user-images.githubusercontent.com/97940277/187892986-02557290-123f-41fc-af1a-01b0b0328ed0.png)<BR>
