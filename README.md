@@ -901,3 +901,23 @@ contours = measure.find_contours (binary, level=0.8)<br>
 # Show the image<br>
 show_image_contour (image_dices, contours)<br>
 ![image](https://user-images.githubusercontent.com/98145915/187897490-09161639-3776-45cf-8112-94a2ce4313c1.png)<BR>
+45.edge dection <br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+img0=cv2.imread('animated-colorful-shapes.jpeg',)<br>
+gray=cv2.cvtColor(img0,cv2.COLOR_BGR2GRAY)<br>
+img=cv2.GaussianBlur(gray,(3,3),0)<br>
+laplacian=cv2.Laplacian(img,cv2.CV_64F)<br>
+Sobelx=cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)<br>
+Sobely=cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)<br>
+plt.subplot(2,2,1),plt.imshow(img,cmap='gray')<br>
+plt.title('Orginal'),plt.xticks([]),plt.yticks([])<br>
+plt.subplot(2,2,2),plt.imshow(laplacian,cmap='gray')<br>
+plt.title('laplacian'),plt.xticks([]),plt.yticks([])<br>
+plt.subplot(2,2,3),plt.imshow(Sobelx,cmap='gray')<br>
+plt.title('Sobel X'),plt.xticks([]),plt.yticks([])<br>
+plt.subplot(2,2,4),plt.imshow(Sobely,cmap='gray')<br>
+plt.title('Sobel Y'),plt.xticks([]),plt.yticks([])<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/187904025-5e6ac969-832b-4288-976e-b0e9dd1d2d0a.png)<br>
