@@ -781,3 +781,75 @@ bg_red=Image.new('RGB',(256,256),color=(255,0,0))<br>
 filled_edge=ImageChops.darker(bg_red,edge)<br>
 filled_edge<br>
 ![image](https://user-images.githubusercontent.com/98145915/187876572-223224e3-7a9e-4978-91f8-dceedfdd7243.png)<br>
+ 38.import numpy as np<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+img =cv2.imread('dimage_damaged.png')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+mask=cv2.imread('dimage_mask.png',0)<br>
+plt.imshow(mask)<br>
+plt.show()<br>
+dst=cv2.inpaint(img,mask,3,cv2.INPAINT_TELEA)<br>
+cv2.imwrite('dimage_inpainted.png',dst)<br>
+plt.imshow(dst)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145915/187877347-96df77e8-1a5f-419a-957d-fef89f1881f1.png<br>
+ 39.import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+import pandas as pd<br>
+plt.rcParams['figure.figsize']=(10,8)<br>
+def show_image(image,title='Image',cmap_type='gray'):<br>
+    plt.imshow(iamge,cmap=cmap_type)<br>
+    plt.title(title)<br>
+    plt.axis('off')<br><br>
+    
+def plot_comparison(img_original,img_filtered,img_title_filtered):<br><br>
+    fig,(ax1,ax2)=plt.subplots(ncols=2,figsize=(10,8),sharex=True,sharey=True)<br><br>
+    ax1.imshow(img_original,cmap=plt.cm.gray)<br><br>
+    ax1.set_title('original')<br><br>
+    ax1.axis('off')<br><br>
+    ax2.imshow(img_filtered,cmap=plt.cm.gray)<br><br>
+    ax2.set_title(img_title_filtered)<br><br>
+    ax1.axis('off')<br><br>
+from skimage.restoration import inpaint<br><br>
+from skimage.transform import resize
+from skimage import color<br><br>
+image_with_logo=plt.imread('imlogo.png')<br><br>
+#intitalize the mask<br><br>
+mask=np.zeros(image_with_logo.shape[:-1])<br><br>
+#set the pixels where the logo is to 1<br><br>
+mask[210:272,360:425]=1<br><br>
+#apply inpainting to remove the logo<br><br>
+image_logo_removed=inpaint.inpaint_biharmonic(image_with_logo,mask,multichannel=True)<br><br>
+#show the original and logo removed images<br><br>
+plot_comparison(image_with_logo,image_logo_removed,'image with logo removed')<br><br><br>
+ ![image](https://user-images.githubusercontent.com/98145915/187878457-89635124-14c7-4200-afdd-4defb3217dba.png)<br><br><br>
+40.from skimage.util import random_noise<br>
+fruit_image = plt.imread('fruitts.jpeg')<br>
+#Add noise to the image<br>
+noisy_image = random_noise (fruit_image)<br>
+#Show th original and resulting image<br>
+plot_comparison (fruit_image, noisy_image, 'Noisy image')<br>
+ ![image](https://user-images.githubusercontent.com/98145915/187878685-f3ad26f4-5e55-4fb1-b9d5-5364a57572c0.png)<Br>
+ 41.from skimage.restoration import denoise_tv_chambolle<br>
+ 
+noisy_image = plt.imread('noisy.jpg')<br>
+ 
+# Apply total variation filter denoising<br>
+ 
+denoised_image = denoise_tv_chambolle (noisy_image, multichannel=True)<br>
+ 
+#show the noisy and denoised image plot_comparison (noisy_image, denoised_image, 'Denoised Image')<br>
+ 
+plot_comparison(noisy_image,denoised_image,'Denoised Image'<br>
+ ![image](https://user-images.githubusercontent.com/98145915/187879357-61dcee82-26f0-46d6-9b2c-68cd6dcbaf5b.png)<br>
+ 41a.from skimage.restoration import denoise_bilateral<br>
+landscape_image = plt.imread('noisy.jpg')<br>
+# Apply bilateral filter denoising<br>
+denoised_image = denoise_bilateral(landscape_image, multichannel=True)<br>
+# Show original and resulting images<br>
+plot_comparison (landscape_image, denoised_image, 'Denoised Image')<br>
+![image](https://user-images.githubusercontent.com/98145915/187879644-e8601e93-1f8e-4713-801d-fb6bc0ac1632.png)<br>
+ 
+
