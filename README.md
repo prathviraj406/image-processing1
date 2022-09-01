@@ -33,6 +33,7 @@ imgresize=cv2.resize(img,(150,160))<br>
 cv2.imshow('resized image',imgresize)<br>
 print('resized image length width',imgresize.shape)<br>
 cv2.waitKey(0)<br>
+
 ![resize](https://user-images.githubusercontent.com/98145915/174047204-98560a67-dda4-446f-9164-d69fbccc2c59.png)
 
 
@@ -854,6 +855,7 @@ plot_comparison (landscape_image, denoised_image, 'Denoised Image')<br>
  42.from skimage.segmentation import slic <br>
 from skimage.color import label2rgb<br>
 face_image = plt.imread('face.jpg')<br>
+ 
 #Obtain the segmentation with 400 regions <br>
 segments = slic (face_image, n_segments-400)<br>
 #Put segments on top of original image to compare <br>
