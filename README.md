@@ -734,4 +734,50 @@ max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:
 <br>
 print(max_channels)<br>
 ![image](https://user-images.githubusercontent.com/98145915/186399922-7d86c751-f106-4679-ab6a-e18de356ffff.png)<br>
+37.from PIL import Image,ImageChops,ImageFilter<br><br>
+from matplotlib import pyplot as plt<br><br>
+x=Image.open('x.png' )<br><br>
+o=Image.open('o.png' )<br><br>
+print('size of the image: ',x.size, 'colour mode:',x.mode)<br><br>
+print('size of the image:',o.size, 'colour mode:',o.mode)<br>
+plt.subplot(121), plt.imshow(x)<br><br>
+plt.axis('off')<br><br>
+plt.subplot(122), plt.imshow(o)<br>
+plt.axis('off')<br>
+merged=ImageChops.multiply(x,o)<br>
+add=ImageChops.add(x,o)<br>
+greyscale=merged.convert('L')<br>
+greyscale<br>
+![image](https://user-images.githubusercontent.com/98145915/187874524-be98b7fc-57ef-4572-94dd-8e9d5a3cdb8f.png)<br>
+37 a.image=merged<br>
+print('image size:',image.size,'\ncolor mode:',image.mode,'\nimage width:',image.width,'| also represented by:',image.size[0],'\nimage height:',image.height,'| also represented by:',image.size[1])<br>
+output<br>
+image size: (256, 256) <br>
 
+color mode: RGB <br>
+
+image width: 256 | also represented by: 256 <br>
+
+image height: 256 | also represented by: 256<br>
+37 b.pixel=greyscale.load()<br>
+for row in range(greyscale.size[0]):<br>
+    for column in range(greyscale.size[1]):<br>
+       if pixel[row,column] !=(255):<br>
+          pixel[row,column]=(0)<br>
+greyscale<br>
+![image](https://user-images.githubusercontent.com/98145915/187875812-c865bea0-61ca-4eba-996e-ae8d653c81fb.png)<br>
+37 c.invert=ImageChops.invert(greyscale)<br>
+bg=Image.new('L',(256,256),color=(255))<br>
+subt=ImageChops.subtract(bg,greyscale)<br>
+rotate=subt.rotate(45)<br>
+rotate<br>
+![image](https://user-images.githubusercontent.com/98145915/187876029-687871e1-0dca-412f-92ab-07b986908fe1.png)<br>
+37 d.blur=greyscale.filter(ImageFilter.GaussianBlur(radius=1))<br>
+edge=blur.filter(ImageFilter.FIND_EDGES)<br>
+edge<br>
+![image](https://user-images.githubusercontent.com/98145915/187876275-ee6de9b7-1f56-4436-800e-dbfbf0f9238a.png)<br>
+37e.edge=edge.convert('RGB')<br>
+bg_red=Image.new('RGB',(256,256),color=(255,0,0))<br>
+filled_edge=ImageChops.darker(bg_red,edge)<br>
+filled_edge<br>
+![image](https://user-images.githubusercontent.com/98145915/187876572-223224e3-7a9e-4978-91f8-dceedfdd7243.png)<br>
