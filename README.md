@@ -861,5 +861,43 @@ segments = slic (face_image, n_segments-400)<br>
 #Put segments on top of original image to compare <br>
 segmented_image = label2rgb(segments, face_image, kind='avg')<br>
 #Show the segmented image <br>
-plot_comparison (face_image, segmented_image, 'Segmented image, 400 superpixels')<br><br>
+plot_comparison (face_image, segmented_image, 'Segmented image, 400 superpixels')<br><br><br>
 ![image](https://user-images.githubusercontent.com/97940277/187892986-02557290-123f-41fc-af1a-01b0b0328ed0.png)<BR>
+43. #4)contours:<br>
+#a)contouriinng shapes<br>
+def show_image_contour(image,contours)<br>
+    plt.figure()<br>
+    for n,contour in enumerate(contours):<br>
+        plt.plot(contour[:,1],contour[:,0],linewidth=3)<br>
+    plt.imshow(image,interpolation='nearest',cmap='gray_r')<br>
+    plt.title('contour')<br>
+    plt.axis('off')<br>
+ 43.A.from skimage import measure,data<br>
+#obtain the horse image<br>
+horse_image=data.horse()<br>
+#find the contour with a constant level of 0.8<br>
+contours=measure.find_contours(horse_image,level=0.8)<br>
+#shows the image with contours found<br>
+show_image_contour(horse_image,contours)<br>
+ ![image](https://user-images.githubusercontent.com/98145915/187896891-e527ebaa-d1de-4aab-9d4f-ae2c577b2015.png)<br>
+ 44.#b)find contours of an image that is not binary<br>
+from skimage.io import imread <br>
+from skimage.filters import threshold_otsu<br>
+
+image_dices = imread('diceimg.png')<br><br>
+
+# Make the image grayscale<br><br>
+image_dices = color.rgb2gray(image_dices)<br><br>
+
+#Obtain the optimal thresh value <br>
+thresh = threshold_otsu(image_dices)<br>
+
+# Apply thresholding<br>
+binary=image_dices > thresh<br>
+
+# Find contours at a constant value of 0.8<br>
+contours = measure.find_contours (binary, level=0.8)<br>
+
+# Show the image<br>
+show_image_contour (image_dices, contours)<br>
+![image](https://user-images.githubusercontent.com/98145915/187897490-09161639-3776-45cf-8112-94a2ce4313c1.png)<BR>
